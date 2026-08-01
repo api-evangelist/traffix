@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of traffixsystems.com (legacy Traffix Systems domain, now held by F5 Networks)
+note: >-
+  Traffix Systems was acquired by F5 Networks in 2012. The legacy domain
+  traffixsystems.com still resolves but is parked on F5 infrastructure
+  (F5 nameservers and mail exchangers); no web service answers on HTTP or
+  HTTPS. SPF is a hard "send nothing" record and DMARC is p=reject with
+  F5-operated reporting addresses — the domain is locked down, not operated.
+hosts:
+- host: traffixsystems.com
+  a_record: 107.162.230.156
+  https: false
+  https_status: 'no response (connection timeout)'
+  http_status: 'no response (connection timeout)'
+  tls_version: null
+  hsts: false
+- host: www.traffixsystems.com
+  a_record: 107.162.230.156
+  https: false
+  https_status: 'no response (connection timeout)'
+domains:
+- domain: traffixsystems.com
+  nameservers:
+  - pdns130.f5.com
+  - pdns131.f5.com
+  - pdns150.f5.com
+  - pdns151.f5.com
+  mx:
+  - mail13.f5.com
+  - mail15.f5.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: v=spf1 -all
+  dmarc: true
+  dmarc_policy: reject
