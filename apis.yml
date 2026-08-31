@@ -60,6 +60,11 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/f5-networks/
+  name: F5 Networks
+  x-relationship: acquired
+  x-evidence: "Bessemer Venture Partners partnered with the company in 2011, and in 2012 Traffix was acquired by F5 Networks, which absorbed its Diameter signaling technology."
 - type: About
   name: Bessemer Venture Partners portfolio profile
   url: https://www.bvp.com/companies/traffix
